@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Book(
     val title:String?,
-    val authorId: String?,
+    val authorId: String?=null,
     val categoryId:String?=null,
     val publicationDate:String?=null,
     val price:Double,

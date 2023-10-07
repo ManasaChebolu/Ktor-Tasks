@@ -32,7 +32,7 @@ class BookServices {
     suspend fun updateBookService(iD:String?,price:Double):ResponseMessage {
         val id = iD?.let { UUID.fromString(it) }
         return if(id == null)
-            throw NotNullOrBlankException(ResponseMessage("ID shouldn't be null Or balnk",false))
+            throw NotNullOrBlankException(ResponseMessage("ID shouldn't be null Or blank",false))
         else {
             val row=bookRepository.updateBook(id,price)
             if (row == 1)

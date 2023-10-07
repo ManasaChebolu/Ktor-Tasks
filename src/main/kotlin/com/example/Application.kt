@@ -1,6 +1,6 @@
 package com.example
 
-//import com.example.data.tableData
+import com.example.data.tableData
 import com.example.databaseConnection.DatabaseFactory
 import com.example.plugins.*
 import com.example.statusPage.statusPage
@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
 
  fun Application.module() {
     DatabaseFactory.init()
-     //tableData()
+     tableData()
      contentNegotiation()
      statusPage()
     configureRouting()
