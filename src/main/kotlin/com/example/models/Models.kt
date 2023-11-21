@@ -1,4 +1,5 @@
 package com.example.models
+
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -31,10 +32,15 @@ data class ResponseData(
 )
 
 @Serializable
-data class Meta(val fund_house:String, val scheme_type:String, val scheme_category:String, val scheme_code :Int, val scheme_name:String)
+data class Meta(val fund_house:String,
+                val scheme_type:String,
+                val scheme_category:String,
+                val scheme_code :Int,
+                val scheme_name:String)
 
 @Serializable
 data class Data(val date :String,val nav:String)
 
 @Serializable
 data class UrlData(val meta : Meta , val data : List<Data>, val status : String)
+

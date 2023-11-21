@@ -5,13 +5,15 @@ import com.example.models.UrlData
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
+const val FIVE_YEARS = 5
+
 fun filterData(schemeCodeData : UrlData,filter:String) :List<Data>{
     val currentDate = LocalDate.now()
     return when(filter) {
         "1M" -> filterDateByRange(schemeCodeData,currentDate.minusMonths(1),currentDate)
         "1W" -> filterDateByRange(schemeCodeData,currentDate.minusWeeks(1),currentDate)
         "1Y" -> filterDateByRange(schemeCodeData,currentDate.minusYears(1),currentDate)
-        else -> filterDateByRange(schemeCodeData,currentDate.minusYears(5),currentDate)
+        else -> filterDateByRange(schemeCodeData,currentDate.minusYears(FIVE_YEARS.toLong()),currentDate)
     }
 }
 

@@ -1,9 +1,9 @@
 package com.example.httpClient
 
-import io.ktor.client.*
-import io.ktor.client.engine.cio.*
-import io.ktor.client.plugins.contentnegotiation.*
-import io.ktor.serialization.gson.*
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.serialization.gson.gson
 
  fun getClient(): HttpClient {
     val client = HttpClient(CIO) {

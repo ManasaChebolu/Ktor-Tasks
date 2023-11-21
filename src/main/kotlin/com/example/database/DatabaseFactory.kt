@@ -1,12 +1,12 @@
 package com.example.database
 
+
 import com.example.database.tables.SchemeDataTable
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
-
 
 object DatabaseFactory {
     fun init() {
@@ -27,3 +27,4 @@ object DatabaseFactory {
             }
         }
 }
+

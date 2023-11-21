@@ -9,3 +9,4 @@ object InfoMessage {
     const val INVALID_ID = "ID shouldn't be zero or negative number or blank"
     const val INVALID_FILTER ="Filter should be either 1M ,1W,1Y or 5Y"
 }
+

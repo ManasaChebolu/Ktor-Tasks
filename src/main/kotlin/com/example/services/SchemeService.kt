@@ -9,6 +9,8 @@ import com.example.plugins.TableNotExistsException
 import com.example.repository.SchemeRepository
 import com.example.utlis.InfoMessage
 import org.jetbrains.exposed.exceptions.ExposedSQLException
+import java.sql.SQLException
+import java.util.logging.Logger
 
 class SchemeService {
     private val schemeRepository = SchemeRepository()
@@ -18,6 +20,7 @@ class SchemeService {
            schemeRepository.getSchemeDataRepo()
            return ResponseMessage(InfoMessage.SUCCESS_INSERT, true)
         } catch (e: ExposedSQLException) {
+            println("ExposedSQLException occurred: ${e.message}")
             throw TableNotExistsException(ResponseMessage(InfoMessage.INVALID_TABLE_NOT_EXIST,false))
         }
     }
@@ -30,15 +33,19 @@ class SchemeService {
             else
                 return response
         }catch (e: ExposedSQLException) {
+            println("ExposedSQLException occurred: ${e.message}")
             throw TableNotExistsException(ResponseMessage(InfoMessage.INVALID_TABLE_NOT_EXIST,false))
         }
     }
 
     suspend fun postMetaDataRepoResult(schemeCode :Int,filter :String): Response {
-        try {
-            return schemeRepository.postMetaDataRepo(schemeCode, filter)
-        } catch (e: NullPointerException) {
-            throw NotNullOrBlankException(ResponseMessage(InfoMessage.INVALID_SCHEME_CODE_NOT_EXIST, false))
+       return try {
+             schemeRepository.postMetaDataRepo(schemeCode, filter)
         }
+       catch (e: NullPointerException) {
+           println("NullPointerException occurred: ${e.message}")
+           throw NotNullOrBlankException(ResponseMessage(InfoMessage.INVALID_SCHEME_CODE_NOT_EXIST, false))
+       }
     }
 }
+

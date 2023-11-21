@@ -11,3 +11,4 @@ interface SchemeInterface {
     suspend fun postMetaDataRepo(schemeCode : Int,filter : String) : Response
 
 }
+

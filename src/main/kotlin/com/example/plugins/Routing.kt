@@ -3,11 +3,15 @@ package com.example.plugins
 import com.example.models.RequestBySchemeCode
 import com.example.models.RequestBySchemeName
 import com.example.services.SchemeService
-import io.ktor.http.*
-import io.ktor.server.application.*
-import io.ktor.server.request.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
+import io.ktor.http.HttpStatusCode
+import io.ktor.server.application.Application
+import io.ktor.server.application.call
+import io.ktor.server.request.receive
+import io.ktor.server.response.respond
+import io.ktor.server.routing.routing
+import io.ktor.server.routing.get
+import io.ktor.server.routing.post
+
 
 fun Application.configureRouting() {
     val schemeService = SchemeService()
@@ -24,7 +28,8 @@ fun Application.configureRouting() {
 
         post("/searchDataBySchemeCode") {
             val request = call.receive<RequestBySchemeCode>()
-            call.respond(HttpStatusCode.OK,schemeService.postMetaDataRepoResult(request.request.schemeId,request.request.filter!!))
+            call.respond(HttpStatusCode.OK,
+                schemeService.postMetaDataRepoResult(request.request.schemeId,request.request.filter!!))
         }
 
     }
