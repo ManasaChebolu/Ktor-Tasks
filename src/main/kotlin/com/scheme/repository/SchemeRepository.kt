@@ -1,14 +1,14 @@
-package com.example.repository
+package com.scheme.repository
 
-import com.example.database.DatabaseFactory.dbQuery
-import com.example.database.tables.SchemeDataTable
-import com.example.filterData
-import com.example.httpClient.getData
-import com.example.httpClient.getSchemeData
-import com.example.interfaces.SchemeInterface
-import com.example.models.ResponseData
-import com.example.models.Response
-import com.example.models.Scheme
+import com.scheme.database.DatabaseFactory.dbQuery
+import com.scheme.database.tables.SchemeDataTable
+import com.scheme.filterData
+import com.scheme.httpClient.getData
+import com.scheme.httpClient.getSchemeData
+import com.scheme.interfaces.SchemeInterface
+import com.scheme.models.ResponseData
+import com.scheme.models.Response
+import com.scheme.models.Scheme
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select

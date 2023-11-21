@@ -1,12 +1,12 @@
-package com.example.utlis.helperFunctions
+package com.scheme.utlis.helperFunctions
 
-import com.example.models.RequestBySchemeCode
-import com.example.models.RequestBySchemeName
-import com.example.models.ResponseMessage
-import com.example.plugins.InvalidFilterException
-import com.example.plugins.InvalidIdException
-import com.example.plugins.NotNullOrBlankException
-import com.example.utlis.InfoMessage
+import com.scheme.models.RequestBySchemeCode
+import com.scheme.models.RequestBySchemeName
+import com.scheme.models.ResponseMessage
+import com.scheme.plugins.InvalidFilterException
+import com.scheme.plugins.InvalidIdException
+import com.scheme.plugins.NotNullOrBlankException
+import com.scheme.utlis.InfoMessage
 
 class HelperFunctions  {
     fun validateSchemeName(request: RequestBySchemeName) {

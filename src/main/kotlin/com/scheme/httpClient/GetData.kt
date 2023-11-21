@@ -1,6 +1,6 @@
-package com.example.httpClient
+package com.scheme.httpClient
 
-import com.example.models.Scheme
+import com.scheme.models.Scheme
 import com.google.gson.Gson
 import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText

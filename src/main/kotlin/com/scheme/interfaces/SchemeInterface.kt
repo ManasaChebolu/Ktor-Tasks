@@ -1,7 +1,7 @@
-package com.example.interfaces
+package com.scheme.interfaces
 
-import com.example.models.Response
-import com.example.models.Scheme
+import com.scheme.models.Response
+import com.scheme.models.Scheme
 
 
 interface SchemeInterface {

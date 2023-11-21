@@ -1,8 +1,8 @@
-package com.example.plugins
+package com.scheme.plugins
 
-import com.example.models.RequestBySchemeCode
-import com.example.models.RequestBySchemeName
-import com.example.utlis.helperFunctions.HelperFunctions
+import com.scheme.models.RequestBySchemeCode
+import com.scheme.models.RequestBySchemeName
+import com.scheme.utlis.helperFunctions.HelperFunctions
 import io.ktor.server.application.install
 import io.ktor.server.plugins.requestvalidation.ValidationResult
 import io.ktor.server.plugins.requestvalidation.RequestValidation

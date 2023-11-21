@@ -1,8 +1,8 @@
-package com.example.plugins
+package com.scheme.routes
 
-import com.example.models.RequestBySchemeCode
-import com.example.models.RequestBySchemeName
-import com.example.services.SchemeService
+import com.scheme.models.RequestBySchemeCode
+import com.scheme.models.RequestBySchemeName
+import com.scheme.services.SchemeService
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.Application
 import io.ktor.server.application.call

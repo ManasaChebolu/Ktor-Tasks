@@ -1,6 +1,6 @@
-package com.example.plugins
+package com.scheme.plugins
 
-import com.example.models.ResponseMessage
+import com.scheme.models.ResponseMessage
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.Application
 import io.ktor.server.application.install

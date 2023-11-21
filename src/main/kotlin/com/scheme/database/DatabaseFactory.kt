@@ -1,7 +1,7 @@
-package com.example.database
+package com.scheme.database
 
 
-import com.example.database.tables.SchemeDataTable
+import com.scheme.database.tables.SchemeDataTable
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.jetbrains.exposed.sql.Database

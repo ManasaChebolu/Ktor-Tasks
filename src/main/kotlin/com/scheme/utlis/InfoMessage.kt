@@ -1,4 +1,4 @@
-package com.example.utlis
+package com.scheme.utlis
 
 object InfoMessage {
     const val SUCCESS_INSERT = "Successfully inserted"

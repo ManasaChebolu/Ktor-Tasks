@@ -1,16 +1,14 @@
-package com.example.services
+package com.scheme.services
 
-import com.example.models.Response
-import com.example.models.ResponseMessage
-import com.example.models.Scheme
-import com.example.plugins.NotNullOrBlankException
-import com.example.plugins.SchemeNameNotExistException
-import com.example.plugins.TableNotExistsException
-import com.example.repository.SchemeRepository
-import com.example.utlis.InfoMessage
+import com.scheme.models.Response
+import com.scheme.models.ResponseMessage
+import com.scheme.models.Scheme
+import com.scheme.plugins.NotNullOrBlankException
+import com.scheme.plugins.SchemeNameNotExistException
+import com.scheme.plugins.TableNotExistsException
+import com.scheme.repository.SchemeRepository
+import com.scheme.utlis.InfoMessage
 import org.jetbrains.exposed.exceptions.ExposedSQLException
-import java.sql.SQLException
-import java.util.logging.Logger
 
 class SchemeService {
     private val schemeRepository = SchemeRepository()

@@ -1,7 +1,7 @@
-package com.example
+package com.scheme
 
-import com.example.models.Data
-import com.example.models.UrlData
+import com.scheme.models.Data
+import com.scheme.models.UrlData
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
