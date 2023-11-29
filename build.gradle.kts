@@ -50,9 +50,17 @@ dependencies {
 
 
     implementation("com.h2database:h2:$h2_version")
+    implementation("com.zaxxer:HikariCP:5.0.1")
     implementation("org.testng:testng:7.7.0")
     testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
+
+    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+    testImplementation("io.mockk:mockk:1.13.5")
+    testImplementation("io.ktor:ktor-client-mock:$ktor_version")
+    testImplementation(project(mapOf("path" to ":")))
+
 
     implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
     implementation("io.ktor:ktor-client-serialization:$ktor_version")

@@ -1,5 +1,6 @@
 package com.panDetails
 
+import com.panDetails.configuration.Configuration
 import com.panDetails.databaseFactory.DatabaseFactory
 import com.panDetails.plugins.callId
 import com.panDetails.plugins.contentNegotiation
@@ -15,6 +16,7 @@ fun main(args:Array<String>) {
 
 fun Application.module() {
     contentNegotiation()
+    Configuration.init(environment)
     DatabaseFactory.init()
     callId()
     statusPage()

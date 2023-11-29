@@ -1,4 +1,4 @@
-package com.panDetails
+package com.panDetails.utils
 
 import com.panDetails.repositoryTesting.RepositoryTesting
 import com.panDetails.routeTesting.RouteTesting

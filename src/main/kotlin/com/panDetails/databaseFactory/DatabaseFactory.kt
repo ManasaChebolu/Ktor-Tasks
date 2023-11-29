@@ -1,5 +1,6 @@
 package com.panDetails.databaseFactory
 
+import com.panDetails.configuration.Configuration
 import com.panDetails.databaseFactory.tables.OcrInfoTable
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -9,10 +10,10 @@ import org.jetbrains.exposed.sql.transactions.transaction
 
 object DatabaseFactory {
     fun init() {
-        val url = "jdbc:postgresql://localhost:5432/pandetails"
-        val driver = "org.postgresql.Driver"
-        val userName = "postgres"
-        val password = "Chebolu@03"
+        val url = Configuration.env.url
+        val driver = Configuration.env.driver
+        val userName = Configuration.env.user
+        val password = Configuration.env.password
         Database.connect(url, driver, userName, password)
         transaction {
             SchemaUtils.createMissingTablesAndColumns(OcrInfoTable)

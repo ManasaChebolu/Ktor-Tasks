@@ -15,6 +15,7 @@ fun Application.statusPage() {
                 is PanNumberNotExistException -> call.respond(HttpStatusCode.NotFound,cause.msg)
                 is TableNotExistException -> call.respond(HttpStatusCode.BadRequest,cause.msg)
                 is NotNullOrBlankException -> call.respond(HttpStatusCode.BadRequest,cause.msg)
+                is OCRFailedException -> call.respond(HttpStatusCode.BadRequest,cause.msg)
                 else -> call.respond(HttpStatusCode.InternalServerError,cause)
             }
         }
@@ -24,4 +25,6 @@ fun Application.statusPage() {
 class PanNumberNotExistException(val msg: NegativeResponse) : RuntimeException()
 class TableNotExistException(val msg: NegativeResponse) : RuntimeException()
 class NotNullOrBlankException(val msg: NegativeResponse) : RuntimeException()
+class OCRFailedException(val msg:NegativeResponse) : RuntimeException()
+
 

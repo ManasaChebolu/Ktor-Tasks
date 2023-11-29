@@ -8,7 +8,6 @@ import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.util.UUID
 
-
 suspend fun insertData(urlData : ApiData) = dbQuery {
     val asiaTimeZone = ZoneId.of("Asia/Kolkata")
     val zoneDateTime = ZonedDateTime.now(asiaTimeZone)
